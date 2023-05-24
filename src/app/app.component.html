@@ -1,15 +1,15 @@
 <!-- <app-home></app-home>
 <app-contact-us></app-contact-us> -->
 <h1>Welcome!</h1>
-<router-outlet></router-outlet>
+
 <button [routerLink]="['home']">Go to Home</button>
 <button [routerLink]="['contact']">Contact us</button>
 <button (click)="onClick()">Go to Products</button>
-
-<h2>Two way binding</h2>
+<router-outlet></router-outlet>
+<!-- <h2>Two way binding</h2>
 <label>Name</label>
 <input type="text" [value]="name" (input)="name=($any($event.target).value)">
 <p>Input name is: {{ name }}</p>
 <label>Age</label>
 <input type="text" [(ngModel)]="age">
-<button (click)="addOne()">Click</button>
+<button (click)="addOne()">Click</button> -->

@@ -28,15 +28,15 @@ export class HomeComponent implements OnInit {
     this.temp = "";
   }
 
-  onInput(event: any){
-    console.log("Input event, ", event.target.value);
+  onInput(event: Event){
+    console.log("Input event, ", (<HTMLInputElement>event.target)?.value);
   }
-  onChange(event: any){
-    this.value=event.target.value;
-    console.log("Change event, ", event.target.value);
+  onChange(event: Event){
+    this.value=(event.target as HTMLInputElement).value;
+    console.log("Change event, ", (event.target as HTMLInputElement).value);
   }
-  onKeyUp(event: any){
-    this.value=event.target.value;
-    console.log("Key Up event, ", event.target.value);
+  onKeyUp(event: Event){
+    this.value=(event.target as HTMLInputElement).value;
+    console.log("Change event, ", (event.target as HTMLInputElement).value);
   }
 }
