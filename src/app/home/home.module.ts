@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { EmployeeListComponent } from './contact-us/employee-list/employee-list.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    EmployeeListComponent
   ],
   imports: [
     CommonModule
@@ -15,6 +17,6 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   exports:[
     HomeComponent,
     ContactUsComponent
-  ]
+  ],
 })
 export class HomeModule { }
