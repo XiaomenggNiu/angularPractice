@@ -1,1 +1,6 @@
 <p>Page Not Found</p>
+<div *ngIf="quotes != undefined">
+    <p *ngFor="let quote of quotes">
+        {{ quote.quote }}
+    </p>
+</div>
