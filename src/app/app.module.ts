@@ -8,10 +8,14 @@ import { ProductsModule } from './products/products.module';
 import { ErrorModule } from './error/error.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LifecycleHooksComponent } from './lifecycleHooks/lifecycle-hooks/lifecycle-hooks.component';
+import { ChildComponent } from './lifecycleHooks/child/child.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LifecycleHooksComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
