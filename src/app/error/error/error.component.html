@@ -1,6 +1,9 @@
-<p>Page Not Found</p>
-<div *ngIf="quotes != undefined">
-    <p *ngFor="let quote of quotes">
+<br><br>
+<button id="btn">Click</button>
+<app-new-quote></app-new-quote>
+<ul *ngIf="quotes$ | async as quotes">
+    <li *ngFor="let quote of quotes">
         {{ quote.quote }}
-    </p>
-</div>
+    </li>
+</ul>
+
