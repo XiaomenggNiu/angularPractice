@@ -1,6 +1,30 @@
-<h2>Parent component</h2>
+<form [formGroup]="messageForm">
+  <label>Your username: </label>
+  <input type="text" formControlName="username" />
+  <p *ngIf="messageForm.controls.username.errors?.userDoesNotExist">Prprpr</p>
+  <br />
+  <label>Your email: </label>
+  <input type="text" formControlName="email" />
+  <br />
+  <label>Your message: </label>
+  <input type="text" formControlName="message" />
+  <br />
+  <label>Choose an employee: </label>
+  <div formArrayName="employees">
+    <div *ngFor="let controls of employees.controls; let i = index">
+      <input type="checkbox" [formControlName]="i" /> 
+      {{ employeeList[i].name }}
+    </div>
+    <div *ngIf="employees.errors?.notEnough">
+        You must select at least one employee.
+    </div>
+  </div>
+  <button (click)="onClick()">Submit</button>
+</form>
+
+<!-- <h2>Parent component</h2> -->
 <!-- template reference -->
-<label>Send message to child: </label>
+<!-- <label>Send message to child: </label>
 <input type="text" (keyup)="onInput(message)" #message>
 
 <p>Message from child: {{ fromChild }}</p>
@@ -9,4 +33,4 @@
 <app-employee-list [fromParent]="toChild" 
 (toParentEvent)="onChildEvent($event)">
 
-</app-employee-list> 
+</app-employee-list>  -->
