@@ -1,7 +1,9 @@
 <form [formGroup]="messageForm">
   <label>Your username: </label>
   <input type="text" formControlName="username" />
-  <p *ngIf="messageForm.controls.username.errors?.userDoesNotExist">Prprpr</p>
+  <p *ngIf="messageForm.controls['username'].errors?.userDoesNotExist">
+    User does not exist.
+  </p>
   <br />
   <label>Your email: </label>
   <input type="text" formControlName="email" />
