@@ -8,7 +8,8 @@ import { LoginService } from '../login.service';
   styleUrls: ['./login.component.sass']
 })
 export class LoginComponent implements OnInit {
-  // loginFlag = false;
+  bool = true;
+  val = 3;
   constructor(private login: LoginService) { }
 
   ngOnInit(): void {

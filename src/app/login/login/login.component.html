@@ -1,3 +1,31 @@
-<p>login works!</p>
+<!-- <p>login works!</p>
 
-<button (click)="onLogIn()"> Click to login</button>
+<button (click)="onLogIn()"> Click to login</button> -->
+<div class="container">Inside div</div>
+<ng-container class="container">
+    <p>Inside ngContainer</p>
+</ng-container>
+
+<!-- use ngContainer with ngIf, ngFor, ngSwitch -->
+<ng-template #name1>
+    First ngTemplate
+</ng-template>
+<ng-template #name2>
+    Second ngTemplate
+</ng-template>
+<ng-template #name3>
+    Third ngTemplate
+</ng-template>
+<!-- *ngIf -->
+<!-- <ng-template [ngIf]="condition">
+    content when condition is true
+</ng-template> -->
+<div [ngTemplateOutlet]="(val == 1) ? name1 : (val == 2)
+ ? name2 : name3">
+
+</div>
+
+<app-login-form>
+    <p id="first">Sending from parent</p>
+    <button id="second">Click here</button>
+</app-login-form>

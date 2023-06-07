@@ -13,13 +13,15 @@ import { ChildComponent } from './lifecycleHooks/child/child.component';
 import { LoginComponent } from './login/login/login.component';
 import { AuthGuard } from './shared/auth.guard';
 import { LoginService } from './login/login.service';
+import { LoginFormComponent } from './login/login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LifecycleHooksComponent,
     ChildComponent,
-    LoginComponent
+    LoginComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
