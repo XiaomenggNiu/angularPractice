@@ -3,6 +3,7 @@
     <input type="text" [(ngModel)]="userInput"/>
 </div>
 <button (click)="addNewProduct()">Add Product</button>
+<router-outlet></router-outlet>
 <table>
     <!-- display: none & visibility: hidden -->
     <ng-container *ngIf="products.length">
@@ -15,7 +16,7 @@
     <ng-container *ngIf="products.length">
         <tr *ngFor="let product of products | search: userInput" appMyFirst>
             <td>{{ product.id }}</td>
-            <td>{{ product.title }}</td>
+            <td [routerLink]="['details', product.id]">{{ product.title }}</td>
             <td>{{ product.price | currency: "CAD" : "code"}}</td>
             <td>{{ product.quantity }}</td>
             <td>{{ product.date | date:'longDate' | uppercase }}</td>
